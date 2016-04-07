@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -12,6 +13,28 @@ namespace WeTripServiceApp
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+
+        public void insertSomething()
+        {
+            SqlConnection myConnection = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            
+            try
+            {
+                using (myConnection)
+                {
+                    myConnection.Open();
+                    SqlCommand myCommand = new SqlCommand("INSERT INTO testTable VALUES (134)", myConnection);
+                    myCommand.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
