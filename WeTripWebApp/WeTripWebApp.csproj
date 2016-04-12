@@ -81,6 +81,16 @@
     <None Include="Service References\ServiceReferenceTest\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\TestReference\Service1.wsdl" />
+    <None Include="Service References\TestReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,6 +103,13 @@
     <None Include="Service References\ServiceReferenceTest\configuration91.svcinfo" />
     <None Include="Service References\ServiceReferenceTest\configuration.svcinfo" />
     <None Include="Service References\ServiceReferenceTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TestReference\Service1.disco" />
+    <None Include="Service References\TestReference\configuration91.svcinfo" />
+    <None Include="Service References\TestReference\configuration.svcinfo" />
+    <None Include="Service References\TestReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -112,6 +129,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\TestReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeTripServiceApp\WeTripServiceApp.csproj">
@@ -124,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReferenceTest\" />
+    <WCFMetadataStorage Include="Service References\TestReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
