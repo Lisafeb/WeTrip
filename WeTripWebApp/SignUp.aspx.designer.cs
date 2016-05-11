@@ -31,6 +31,15 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.TextBox userNameText;
         
         /// <summary>
+        /// RequiredFieldValidatorUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorUsername;
+        
+        /// <summary>
         /// emailText control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace WeTripWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox emailText;
+        
+        /// <summary>
+        /// RequiredFieldValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+        
+        /// <summary>
+        /// RegularExpressionValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorEmail;
         
         /// <summary>
         /// passwordText control.
@@ -49,6 +76,15 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.TextBox passwordText;
         
         /// <summary>
+        /// RequiredFieldValidatorPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPassword;
+        
+        /// <summary>
         /// repeatPasswordText control.
         /// </summary>
         /// <remarks>
@@ -56,6 +92,15 @@ namespace WeTripWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox repeatPasswordText;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// signUpButton control.
