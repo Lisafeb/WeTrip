@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Web;
@@ -36,6 +37,15 @@ namespace WeTripServiceApp.BLL
                 result = 1;
             return result;
         }
+        public Account  getAccountByUsername(string userName)
+        {
+            return dbAccount.getAccountByUserName(userName);
+        }
+        public int updateEmailAndUserName(string userName, string newUserName, string newEmail)
+        {
+            return dbAccount.updateEmailAndUserName(userName, newUserName, newEmail);
+        }
+        
        
         
     }

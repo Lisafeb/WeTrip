@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,10 @@ namespace WeTripServiceApp.DAL
     {
         int insertAccount(Account account);
         string getHashedPasswordFromAccountOnDatabase(string userName);
-       
+
+        Account getAccountByUserName(string userName);
+        int updateEmailAndUserName(string userName, string newUsername, string newEmail);
+
+
     }
 }

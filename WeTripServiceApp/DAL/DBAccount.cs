@@ -97,6 +97,41 @@ namespace WeTripServiceApp.DAL
 
                 return result;
         }
+        public Account getAccountByUserName(string userName)
+        {
+
+            Account account = null;
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            string sqlQuery = "select * from Accounts where userName='" + userName + "'";
+            using (sqlCon)
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, sqlCon);
+                command.Connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while(reader.Read())
+                {
+                     account = new Account(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                }
+                return account;
+            }
+        }
+        public int updateEmailAndUserName(string userName, string newUsername, string newEmail)
+        {
+            int result = 1;
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            string sqlQuery = "update Accounts set userName='" + newUsername + "', email='"+ newEmail + "' where userName='" + userName + "'";
+           
+            using (sqlCon)
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, sqlCon);
+                command.Connection.Open();
+                result = command.ExecuteNonQuery();
+                
+            }
+
+            return result;
+        }
+
         
        
     }
