@@ -14,7 +14,10 @@ namespace WeTripServiceApp
     public interface IService1
     {
         [OperationContract]
-        int insertSomething();
+        int insertSomething(string input);
+
+        [OperationContract]
+        int insertTripTest();
 
         [OperationContract]
         string GetData(int value);

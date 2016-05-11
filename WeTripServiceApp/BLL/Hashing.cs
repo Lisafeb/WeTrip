@@ -19,8 +19,17 @@ namespace WeTripServiceApp.BLL
         }
 
         public static bool ValidatePassword(string password, string correctHash)
+
         {
-            return BCrypt.Net.BCrypt.CheckPassword(password, correctHash);
+            try
+            {
+                return BCrypt.Net.BCrypt.CheckPassword(password, correctHash);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
     }
 }

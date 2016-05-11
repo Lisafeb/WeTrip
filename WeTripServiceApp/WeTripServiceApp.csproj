@@ -78,11 +78,15 @@
   <ItemGroup>
     <Compile Include="BLL\AccountCtr.cs" />
     <Compile Include="BLL\Hashing.cs" />
+    <Compile Include="BLL\TripCtr.cs" />
     <Compile Include="DAL\DBAccount.cs" />
     <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\DBTrip.cs" />
     <Compile Include="DAL\IDBAccount.cs" />
+    <Compile Include="DAL\IDBTrip.cs" />
     <Compile Include="MODEL\Account.cs" />
     <Compile Include="MODEL\Test.cs" />
+    <Compile Include="MODEL\Trip.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -98,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\WeTrip.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

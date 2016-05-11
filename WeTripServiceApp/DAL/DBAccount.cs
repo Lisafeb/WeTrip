@@ -97,5 +97,7 @@ namespace WeTripServiceApp.DAL
 
                 return result;
         }
+        
+       
     }
 }

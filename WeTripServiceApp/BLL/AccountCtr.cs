@@ -21,18 +21,17 @@ namespace WeTripServiceApp.BLL
         {
             string salt = Hashing.GetRandomSalt();
             string hashedPassword = Hashing.HashPassword(password, salt);
-
-            Account account = new Account(null, userName, email, hashedPassword, salt);
-
-            return dbAccount.insertAccount(account);
-             
-
+            
+                Account account = new Account(null, userName, email, hashedPassword, salt);
+                return dbAccount.insertAccount(account);
         }
         public int verifyAccount (string userName, string password)
         {
             int result = 0;
             string hashedPassword = dbAccount.getHashedPasswordFromAccountOnDatabase(userName);
+         
             bool response = Hashing.ValidatePassword(password, hashedPassword);
+
             if (response)
                 result = 1;
             return result;

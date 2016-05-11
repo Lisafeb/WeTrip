@@ -7,10 +7,10 @@ using WeTripServiceApp.MODEL;
 
 namespace WeTripServiceApp.DAL
 {
-    interface IDBAccount
+    interface IDBTrip
     {
-        int insertAccount(Account account);
-        string getHashedPasswordFromAccountOnDatabase(string userName);
-       
+        int insertTrip(Trip trip);
+        
+
     }
 }

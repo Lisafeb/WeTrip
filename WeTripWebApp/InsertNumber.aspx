@@ -13,6 +13,13 @@
         <input id="testField" type="text" /><asp:Button ID="testButton" runat="server" OnClick="testButton_Click" Text="Insert" />
     
     </div>
+        <div>
+    Welcome
+    <asp:LoginName ID="LoginName1" runat="server" Font-Bold = "true" />
+    <br />
+    <br />
+    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+</div>
     </form>
 </body>
 </html>

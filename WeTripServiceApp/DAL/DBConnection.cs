@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WeTripServiceApp.DAL
 {
-    public class DBConnection : IDBConnection
+    public class DBConnection 
     {
         private static SqlConnection myConnection = new SqlConnection("user id=dmai0914_2Sem_1;" +
                                  "password=Password1!;server=kraka.ucn.dk;" +

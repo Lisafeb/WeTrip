@@ -18,15 +18,22 @@ namespace WeTripServiceApp
     public class Service1 : IService1
     {
 
-        public int insertSomething()
+        public int insertSomething(string input)
         {
             AccountCtr accountCtr = new AccountCtr();
-            //  return accountCtr.insertAccount("Monika", "mwmwmw25@gmail.com", "blabla");
-            return accountCtr.verifyAccount("Monika","blablad");
+            IDBAccount _dbAccount = new DBAccount();
+            return accountCtr.insertAccount("Monika", "mwmwmw25@gmail.com", "blabla");
+       //     return _dbAccount.userNameIsTaken(input);
 
 
 
 
+        }
+
+        public int insertTripTest()
+        {
+            TripCtr tripCtr = new TripCtr();
+            return tripCtr.insertTrip("title 1", 2, new DateTime(2016,5,2,14,27,00,00), "20000", 20, "bla bla", true, 1);
         }
 
         public string GetData(int value)
