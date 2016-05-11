@@ -12,6 +12,9 @@ namespace WeTripServiceApp.SRV
     public interface ITest
     {
         [OperationContract]
-        string DoWork();
+        string DoWork(string name);
+
+        [OperationContract]
+        Test GetTest(Test test);
     }
 }

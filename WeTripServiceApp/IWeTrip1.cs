@@ -11,14 +11,14 @@ namespace WeTripServiceApp
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     // Commit trial by Alex
     [ServiceContract]
-    public interface IService1
+    public interface IWeTrip1
     {
 
         [OperationContract]
         string GetData(int value);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        WeTripData GetDataUsingDataContract(WeTripData weTripData);
 
         // TODO: Add your service operations here
     }
