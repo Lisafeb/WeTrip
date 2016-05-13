@@ -10,7 +10,7 @@ namespace WeTripServiceApp.BLL
         
         public static string GetRandomSalt()
         {
-            return BCrypt.Net.BCrypt.GenerateSalt(12);
+            return BCrypt.Net.BCrypt.GenerateSalt(6);
         }
 
         public static string HashPassword(string password, string salt)

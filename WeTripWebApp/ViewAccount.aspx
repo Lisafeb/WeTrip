@@ -21,6 +21,14 @@
         <asp:ChangePassword ID="ChangePassword1" runat="server" OnChangedPassword="ChangePassword1_ChangedPassword">
         </asp:ChangePassword>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <p>
+            Password<asp:TextBox ID="PasswordTextBox" runat="server"></asp:TextBox>
+        </p>
+        New Password<asp:TextBox ID="NewPasswordTextBox" runat="server"></asp:TextBox>
+        <p>
+            RepeatPassword<asp:TextBox ID="RepeatPasswordTextBox" runat="server"></asp:TextBox>
+        </p>
+        <asp:Button ID="ChangeButton" runat="server" OnClick="ChangeButton_Click" Text="Button" />
     </form>
 </body>
 </html>

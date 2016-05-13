@@ -10,11 +10,11 @@ namespace WeTripWebApp
 {
     public partial class ViewAccount : System.Web.UI.Page
     {
-        WeTripServiceApp.BLL.AccountCtr b = new AccountCtr();
+       // WeTripServiceApp.BLL.AccountCtr b = new AccountCtr();
         string userName = "";
         
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {  WeTripServiceApp.BLL.AccountCtr b = new AccountCtr();
             string email="";
             if (!this.Page.User.Identity.IsAuthenticated)
             {
@@ -37,7 +37,7 @@ namespace WeTripWebApp
         }
 
         protected void updateButton_Click(object sender, EventArgs e)
-        {
+        {    WeTripServiceApp.BLL.AccountCtr b = new AccountCtr();
             userName = Page.User.Identity.Name;
             string newUserName = userNamefield.Text;
                 string newEmail = emailField.Text;
@@ -49,7 +49,24 @@ namespace WeTripWebApp
 
         protected void ChangePassword1_ChangedPassword(object sender, EventArgs e)
         {
+            userName = Page.User.Identity.Name;
+            WeTripServiceApp.BLL.AccountCtr b = new WeTripServiceApp.BLL.AccountCtr();
+            int result = b.verifyAccount(ChangePassword1.UserName, ChangePassword1.PasswordLabelText);
+            Label1.Text = result.ToString();
 
         }
+
+        protected void ChangeButton_Click(object sender, EventArgs e)
+        {
+
+
+            userName = Page.User.Identity.Name;
+            WeTripServiceApp.BLL.AccountCtr b = new WeTripServiceApp.BLL.AccountCtr();
+            string password = PasswordTextBox.Text;
+            string newPassword = NewPasswordTextBox.Text;
+            string repeatPassword = RepeatPasswordTextBox.Text;
+            int result = b.changePassword(userName, password, newPassword);
+            Label1.Text = result.ToString();
+        }  
     }
 }

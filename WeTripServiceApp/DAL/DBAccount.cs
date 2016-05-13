@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using WeTripServiceApp.MODEL;
+using WeTripServiceApp.BLL;
 
 namespace WeTripServiceApp.DAL
 {
@@ -15,11 +16,11 @@ namespace WeTripServiceApp.DAL
         private static SqlParameter param_email = new SqlParameter("@email", System.Data.SqlDbType.VarChar,50);
         private static SqlParameter param_hashedPassword = new SqlParameter("@hashedPassword", System.Data.SqlDbType.VarChar,128);
         private static SqlParameter param_salt = new SqlParameter("@salt", System.Data.SqlDbType.VarChar,16);
-        
+        //AccountCtr b = new AccountCtr();
 
         public DBAccount()
         {
-
+       //     AccountCtr b = new AccountCtr();
         }
         public int insertAccount(Account account)
         {
@@ -129,6 +130,27 @@ namespace WeTripServiceApp.DAL
                 
             }
 
+            return result;
+        }
+        public int changePassword(string userName, string oldPassword, string newPassword)
+        {
+            int result = 0;
+            string salt = Hashing.GetRandomSalt();
+            string hashedPassword = Hashing.HashPassword(newPassword, salt);
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            string sqlQuery = "update Accounts set hashedPassword='" + hashedPassword + "', salt='" + salt + "' where userName='" + userName + "'";
+           
+                
+                using (sqlCon)
+                {
+                    SqlCommand command = new SqlCommand(sqlQuery, sqlCon);
+                    command.Connection.Open();
+                    result = command.ExecuteNonQuery();
+
+                }
+
+                
+            
             return result;
         }
 
