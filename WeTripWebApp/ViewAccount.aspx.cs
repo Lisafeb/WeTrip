@@ -32,14 +32,24 @@ namespace WeTripWebApp
 
                 emailLabel.Text = b.getAccountByUsername(userName).email;
                 emailField.Text = b.getAccountByUsername(userName).email;
+
             }
         }
 
         protected void updateButton_Click(object sender, EventArgs e)
         {
+            userName = Page.User.Identity.Name;
             string newUserName = userNamefield.Text;
-            string newEmail = emailField.Text;
-            b.updateEmailAndUserName(userName, newUserName, newEmail);
+                string newEmail = emailField.Text;
+            Label1.Text = userName;
+                b.updateEmailAndUserName(userName, newUserName, newEmail);
+            
+
+        }
+
+        protected void ChangePassword1_ChangedPassword(object sender, EventArgs e)
+        {
+
         }
     }
 }

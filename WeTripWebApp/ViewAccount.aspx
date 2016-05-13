@@ -18,8 +18,9 @@
         <asp:Label ID="emailLabel" runat="server" Text="Label"></asp:Label>
         <asp:TextBox ID="emailField" runat="server"></asp:TextBox>
         <asp:Button ID="updateButton" runat="server" OnClick="updateButton_Click" Text="update" />
-        <asp:ChangePassword ID="ChangePassword1" runat="server">
+        <asp:ChangePassword ID="ChangePassword1" runat="server" OnChangedPassword="ChangePassword1_ChangedPassword">
         </asp:ChangePassword>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>
