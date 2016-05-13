@@ -38,9 +38,9 @@
                                         <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="textboxusername" runat="server" AutoCompleteType="Enabled" CausesValidation="True"></asp:TextBox>
+                                        <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Username is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Username is required" ForeColor="Red" ControlToValidate="UserName"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -62,7 +62,7 @@
                                 </tr>
                                 <tr>
                                     <td align="center" colspan="2" style="color:Red;">
-                                        <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                        <asp:Literal ID="FailureText"  runat="server" EnableViewState="False" Text=" "></asp:Literal>
                                     </td>
                                 </tr>
                                 <tr>

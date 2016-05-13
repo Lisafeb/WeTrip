@@ -18,6 +18,8 @@
         <asp:Label ID="emailLabel" runat="server" Text="Label"></asp:Label>
         <asp:TextBox ID="emailField" runat="server"></asp:TextBox>
         <asp:Button ID="updateButton" runat="server" OnClick="updateButton_Click" Text="update" />
+        <asp:ChangePassword ID="ChangePassword1" runat="server">
+        </asp:ChangePassword>
     </form>
 </body>
 </html>

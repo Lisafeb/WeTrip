@@ -13,7 +13,8 @@ namespace WeTripWebApp
 {
     public partial class LogIn : System.Web.UI.Page
     {
-     
+        
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +26,7 @@ namespace WeTripWebApp
 
             WeTripServiceApp.BLL.AccountCtr b = new WeTripServiceApp.BLL.AccountCtr();
             int result = b.verifyAccount(Login1.UserName,Login1.Password);
-       //     string  = result.ToString();
+            UserName.Text = result.ToString();
             if(result==1)
                 FormsAuthentication.RedirectFromLoginPage(Login1.UserName, Login1.RememberMeSet);
         }
