@@ -73,6 +73,7 @@
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="Properties\DataSources\WeTripServiceApp.CompositeType.datasource" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\test2804.pubxml" />
     <None Include="Service References\ServiceReferenceTest\Service1.wsdl" />
     <None Include="Service References\ServiceReferenceTest\Service1.xsd">
@@ -166,6 +167,12 @@
     </Compile>
     <Compile Include="ViewAccount.aspx.designer.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
