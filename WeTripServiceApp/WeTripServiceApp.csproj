@@ -85,6 +85,7 @@
     <Compile Include="DAL\IDBAccount.cs" />
     <Compile Include="DAL\IDBTrip.cs" />
     <Compile Include="MODEL\Account.cs" />
+    <Compile Include="MODEL\Profile.cs" />
     <Compile Include="MODEL\Test.cs" />
     <Compile Include="MODEL\Trip.cs" />
     <Compile Include="Service1.svc.cs">
