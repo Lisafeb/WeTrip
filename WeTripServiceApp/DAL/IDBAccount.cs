@@ -15,6 +15,7 @@ namespace WeTripServiceApp.DAL
 
         Account getAccountByUserName(string userName);
         int updateEmailAndUserName(string userName, string newUsername, string newEmail);
+        int changePassword(string userName, string oldPassword, string newPassword);
 
 
     }

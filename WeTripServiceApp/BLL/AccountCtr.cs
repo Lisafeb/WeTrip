@@ -12,11 +12,12 @@ namespace WeTripServiceApp.BLL
 {
     public class AccountCtr
     {
-        IDBAccount dbAccount = new DBAccount();
+         IDBAccount dbAccount = new DBAccount();
+
         public AccountCtr()
         {
             
-        }
+    }
 
         public int insertAccount (string userName, string email, string password)
         {
@@ -35,6 +36,16 @@ namespace WeTripServiceApp.BLL
 
             if (response)
                 result = 1;
+            return result;
+        }
+        public int changePassword(string username, string oldPassword, string newPassword)
+        {
+            int result = 0;
+            if (this.verifyAccount(username, oldPassword)==1)
+            {
+                result = dbAccount.changePassword(username, oldPassword, newPassword);
+            }
+            
             return result;
         }
         public Account  getAccountByUsername(string userName)
