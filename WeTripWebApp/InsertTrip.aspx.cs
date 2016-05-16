@@ -25,7 +25,7 @@ namespace WeTripWebApp
             string budget = TripBudget.Text;
             int maxNrOfParticipants = Convert.ToInt32(TripParticipants.Text);
             string extraInfo = TripDestination.Text;
-             creatorid = Page.User.Identity.Name;
+           // int creatorId = Page.User.Identity.Name;
             int b = trip.insertTrip(title, length, date, budget, maxNrOfParticipants, extraInfo, true, null);
         }
 

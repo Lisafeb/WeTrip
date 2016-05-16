@@ -73,7 +73,7 @@
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="Properties\DataSources\WeTripServiceApp.CompositeType.datasource" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="UserProfile.aspx" />
     <None Include="Properties\PublishProfiles\test2804.pubxml" />
     <None Include="Service References\ServiceReferenceTest\Service1.wsdl" />
     <None Include="Service References\ServiceReferenceTest\Service1.xsd">
@@ -161,18 +161,19 @@
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewAccount.aspx.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewAccount.aspx.designer.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

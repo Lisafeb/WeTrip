@@ -77,12 +77,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\AccountCtr.cs" />
+    <Compile Include="BLL\ProfileCtr.cs" />
     <Compile Include="BLL\Hashing.cs" />
     <Compile Include="BLL\TripCtr.cs" />
     <Compile Include="DAL\DBAccount.cs" />
     <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\DBProfile.cs" />
     <Compile Include="DAL\DBTrip.cs" />
     <Compile Include="DAL\IDBAccount.cs" />
+    <Compile Include="DAL\IDBProfile.cs" />
     <Compile Include="DAL\IDBTrip.cs" />
     <Compile Include="MODEL\Account.cs" />
     <Compile Include="MODEL\Profile.cs" />
