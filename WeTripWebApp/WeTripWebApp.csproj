@@ -68,12 +68,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CreateUpdateProfile.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="InsertDestination.aspx" />
     <Content Include="InsertNumber.aspx" />
     <Content Include="InsertTrip.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="Properties\DataSources\WeTripServiceApp.CompositeType.datasource" />
-    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\test2804.pubxml" />
     <None Include="Service References\ServiceReferenceTest\Service1.wsdl" />
     <None Include="Service References\ServiceReferenceTest\Service1.xsd">
@@ -118,10 +120,33 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="SignUp.aspx" />
+    <Content Include="Test.aspx" />
     <Content Include="ViewAccount.aspx" />
+    <Content Include="ViewTrip.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateUpdateProfile.aspx.cs">
+      <DependentUpon>CreateUpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateUpdateProfile.aspx.designer.cs">
+      <DependentUpon>CreateUpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDestination.aspx.cs">
+      <DependentUpon>InsertDestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertDestination.aspx.designer.cs">
+      <DependentUpon>InsertDestination.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InsertNumber.aspx.cs">
       <DependentUpon>InsertNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +186,13 @@
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewAccount.aspx.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,11 +200,12 @@
     <Compile Include="ViewAccount.aspx.designer.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="ViewTrip.aspx.cs">
+      <DependentUpon>ViewTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="ViewTrip.aspx.designer.cs">
+      <DependentUpon>ViewTrip.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

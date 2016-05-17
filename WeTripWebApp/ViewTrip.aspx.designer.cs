@@ -11,7 +11,7 @@ namespace WeTripWebApp
 {
 
 
-    public partial class WebForm1
+    public partial class ViewTrip
     {
 
         /// <summary>

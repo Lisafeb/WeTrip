@@ -26,8 +26,8 @@ namespace WeTripWebApp
         protected void testButton_Click(object sender, EventArgs e)
         {
 
-            TestReference.Service1Client client= new TestReference.Service1Client();
-            client.insertSomething();
+          
+           
         }
     }
 }

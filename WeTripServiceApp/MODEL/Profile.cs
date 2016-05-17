@@ -25,7 +25,7 @@ namespace WeTripServiceApp.MODEL
             _country = country;
             _bio = bio;
             _rating = rating;
-            _creatorId = _creatorId;
+            _creatorId = creatorId;
         }
 
         public int? id
