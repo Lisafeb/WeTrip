@@ -1,0 +1,1 @@
+﻿ALTER TABLE Accounts ALTER COLUMN salt varchar(150)

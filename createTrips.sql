@@ -1,0 +1,7 @@
+﻿CREATE TABLE Destinations (
+id INT NOT NULL IDENTITY(1,1),
+destination VARCHAR(50),
+stops VARCHAR(50),
+tripId INT FOREIGN KEY REFERENCES Trips(id) NOT NULL
+PRIMARY KEY(id)
+);
