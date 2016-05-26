@@ -10,7 +10,7 @@
 namespace WeTripWebApp {
     
     
-    public partial class ViewAccount {
+    public partial class ViewProfile {
         
         /// <summary>
         /// form1 control.
@@ -22,103 +22,121 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// userNameLabel control.
+        /// LabelId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label userNameLabel;
+        protected global::System.Web.UI.WebControls.Label LabelId;
         
         /// <summary>
-        /// userNamefield control.
+        /// LabelGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userNamefield;
+        protected global::System.Web.UI.WebControls.Label LabelGender;
         
         /// <summary>
-        /// emailLabel control.
+        /// LabelAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emailLabel;
+        protected global::System.Web.UI.WebControls.Label LabelAge;
         
         /// <summary>
-        /// emailField control.
+        /// DropDownListAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailField;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListAge;
         
         /// <summary>
-        /// Button1 control.
+        /// LabelBudget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label LabelBudget;
         
         /// <summary>
-        /// updateButton control.
+        /// TextBoxBudget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button updateButton;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxBudget;
         
         /// <summary>
-        /// PasswordTextBox control.
+        /// LabelCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
+        protected global::System.Web.UI.WebControls.Label LabelCountry;
         
         /// <summary>
-        /// NewPasswordTextBox control.
+        /// TextBoxCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NewPasswordTextBox;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCountry;
         
         /// <summary>
-        /// RepeatPasswordTextBox control.
+        /// LabelBio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RepeatPasswordTextBox;
+        protected global::System.Web.UI.WebControls.Label LabelBio;
         
         /// <summary>
-        /// Button2 control.
+        /// TextBoxBio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxBio;
         
         /// <summary>
-        /// ChangeButton control.
+        /// LabelRating control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ChangeButton;
+        protected global::System.Web.UI.WebControls.Label LabelRating;
+        
+        /// <summary>
+        /// SaveButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveButton;
+        
+        /// <summary>
+        /// CancelButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CancelButton;
         
         /// <summary>
         /// Label1 control.

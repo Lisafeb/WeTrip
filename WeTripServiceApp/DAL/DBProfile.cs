@@ -9,7 +9,7 @@ namespace WeTripServiceApp.DAL
 {
     public class DBProfile : IDBProfile
     {
-        private static SqlParameter param_Id = new SqlParameter("@Id", System.Data.SqlDbType.Int);
+       // private static SqlParameter param_Id = new SqlParameter("@Id", System.Data.SqlDbType.Int);
         private static SqlParameter param_gender = new SqlParameter("@gender", System.Data.SqlDbType.Bit);
         private static SqlParameter param_age = new SqlParameter("@age", System.Data.SqlDbType.Int);
         private static SqlParameter param_budget = new SqlParameter("@budget", System.Data.SqlDbType.Decimal);
@@ -23,12 +23,28 @@ namespace WeTripServiceApp.DAL
         {
         }
 
-
-        public int UpdateProfile(Profile profile)
+        public int updateProfile(int id, int age, decimal budget, string country, string bio)
         {
             int result = -1;
-            string sqlQuery = "INSERT INTO Profile  OUTPUT inserted.id VALUES (" +
-                "@Id, " +
+
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            string sqlQuery = "update Profiles set age='" + age + "', budget='" + budget + "', country='" + country + "', bio='" + bio + "' where id='" + id + "'";
+
+            using (sqlCon)
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, sqlCon);
+                command.Connection.Open();
+                result = command.ExecuteNonQuery();
+
+            }
+
+            return result;
+        }
+
+        public int insertProfile(Profile profile)
+        {
+            int result = -1;
+            string sqlQuery = "INSERT INTO Profiles  OUTPUT inserted.id VALUES (" +
                 "@gender, " +
                 "@age, " +
                 "@budget, " +
@@ -47,8 +63,7 @@ namespace WeTripServiceApp.DAL
 
                 sqlCommand.Parameters.Clear();
 
-                param_Id.Value = profile.id;
-                sqlCommand.Parameters.Add(param_Id);
+              
 
                 param_gender.Value = profile.gender;
                 sqlCommand.Parameters.Add(param_gender);
@@ -74,6 +89,71 @@ namespace WeTripServiceApp.DAL
                 sqlCommand.Connection.Open();
 
                 result = (int)sqlCommand.ExecuteScalar();
+
+                sqlCommand.Parameters.Clear();
+
+
+
+                sqlCommand.Connection.Close();
+
+
+
+
+            }
+
+            return result;
+        }
+        
+        public Profile getProfileByIdOfCreator(int id)
+        {
+
+            Profile profile = null; 
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            string sqlQuery = "select * from Profiles  where creatorId='" + id + "'";
+            using (sqlCon)
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, sqlCon);
+                command.Connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    profile = new Profile(reader.GetInt32(0), reader.GetBoolean(1), reader.GetInt32(2), reader.GetDecimal(3), reader.GetString(4), reader.GetString(5),reader.GetInt32(6),reader.GetInt32(7));
+                }
+                return profile;
+            }
+        }
+        public int getProfile(int id)
+        {
+            int result = -1;
+            string sqlQuery = "SELECT * FROM Profiles  WHERE creatorId=" +
+                "@creatorId ";
+                
+
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+
+            using (sqlCon)
+            {
+                SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlCon);
+
+
+                sqlCommand.Parameters.Clear();
+
+                
+
+                param_creatorId.Value = id;
+                sqlCommand.Parameters.Add(param_creatorId);
+
+                sqlCommand.Connection.Open();
+
+                try
+                {
+                    result = (int)sqlCommand.ExecuteScalar();
+                }
+                catch (Exception)
+                {
+
+                    result = 0;
+                }
 
                 sqlCommand.Parameters.Clear();
 

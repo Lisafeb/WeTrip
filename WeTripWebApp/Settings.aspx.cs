@@ -9,9 +9,8 @@ using WeTripServiceApp.BLL;
 
 namespace WeTripWebApp
 {
-    public partial class Test : System.Web.UI.Page
-    {
-        public int id;
+    public partial class Settings : System.Web.UI.Page
+    { int? id;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.Page.User.Identity.IsAuthenticated)
@@ -20,27 +19,24 @@ namespace WeTripWebApp
 
 
             }
-            else {
+            else
+            {
+                string userName = Page.User.Identity.Name;
                 AccountCtr a = new AccountCtr();
-
-                if (!IsPostBack)
+                ProfileCtr p = new ProfileCtr();
+                id = a.getAccountByUsername(userName).id;
+                if(p.getProfile((int)id)!=0)
                 {
-                    int? id = a.getAccountByUsername(Page.User.Identity.Name).id;
-                    Label1.Text = id.ToString();
+                    LinkButton2.Visible = false;
+                    ProfileInfoLinkButton.Visible = true;
+                    
                 }
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void LinkButton2_Click(object sender, EventArgs e)
         {
 
-            string part = DropDownList1.SelectedValue;
-            id = Convert.ToInt32(part);
-            Session["id"] = id;
-            Session["onTestPage"] = true;
-            Server.Transfer("~/ViewTrip.aspx", true);
-            
-            
         }
     }
 }

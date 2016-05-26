@@ -1,0 +1,31 @@
+﻿body {
+    background-color:#b3e5fe;
+}
+img {
+    height:75px;
+    margin-left:20px;
+    margin-top:-10px;
+    float:left;
+}
+headerMaster{
+    
+}
+p{
+    margin-top:50px;
+    margin-left:110px;
+    color:cornflowerblue;
+    font-weight:bolder;
+    font-size:25px;
+    
+    
+}
+.logIn
+{
+    width:800px;
+    margin:0 auto;
+}
+head
+{
+    margin:1px;
+}
+

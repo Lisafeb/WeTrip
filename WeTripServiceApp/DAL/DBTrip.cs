@@ -85,6 +85,24 @@ namespace WeTripServiceApp.DAL
 
             return result;
         }
+        public Trip getTripeById(int id)
+        {
+
+            Trip trip = null;
+            SqlConnection sqlCon = new SqlConnection("Data Source = kraka.ucn.dk; Persist Security Info = True; User ID = dmai0914_2Sem_1; Password = Password1!");
+            string sqlQuery = "select * from Trips  where id='" + id + "'";
+            using (sqlCon)
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, sqlCon);
+                command.Connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    trip = new Trip(reader.GetInt32(0),reader.GetString(1),reader.GetInt32(2),reader.GetDateTime(3),reader.GetString(4),reader.GetInt32(5),reader.GetString(6),reader.GetBoolean(7),reader.GetInt32(8));
+                }
+                return trip;
+            }
+        }
 
     }
 }

@@ -27,6 +27,7 @@ namespace WeTripWebApp
                     {
                         b.insertAccount(userName, email, password);
                         Label1.Text = "account inserted succesfully";
+                        Response.Redirect("~/LogIn.aspx");
                     }
                     catch (Exception)
                     {

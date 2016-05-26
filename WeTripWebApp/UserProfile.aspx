@@ -18,20 +18,37 @@
         <asp:Label ID="CurrentUserName" runat="server" Text="Current username:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <asp:Label ID="UserName" runat="server"></asp:Label>
+        <asp:Label ID="LabelUserName" runat="server"></asp:Label>
         <br />
-        Change username to:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
-        <asp:TextBox ID="TextBoxUserName" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
         <br />
         <asp:Label ID="Gender" runat="server" Text="Gender:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <asp:TextBox ID="TextBoxGender" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="DropDownListGender" runat="server">
+            <asp:ListItem Value="true">Male</asp:ListItem>
+            <asp:ListItem Value="false">Female</asp:ListItem>
+        </asp:DropDownList>
         <br />
 &nbsp;<asp:Label ID="Age" runat="server" Text="Age:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <asp:TextBox ID="TextBoxAge" runat="server" TextMode="Number"></asp:TextBox>
+        <asp:DropDownList ID="DropDownListAge" runat="server">
+            <asp:ListItem>18</asp:ListItem>
+            <asp:ListItem>19</asp:ListItem>
+            <asp:ListItem>20</asp:ListItem>
+            <asp:ListItem>21</asp:ListItem>
+            <asp:ListItem>22</asp:ListItem>
+            <asp:ListItem>23</asp:ListItem>
+            <asp:ListItem>24</asp:ListItem>
+            <asp:ListItem>25</asp:ListItem>
+            <asp:ListItem>26</asp:ListItem>
+            <asp:ListItem>27</asp:ListItem>
+            <asp:ListItem>28</asp:ListItem>
+            <asp:ListItem>29</asp:ListItem>
+            <asp:ListItem>30</asp:ListItem>
+            <asp:ListItem>31</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <asp:Label ID="Country" runat="server" Text="Country:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,10 +67,13 @@
         <br />
         <asp:Label ID="Bio" runat="server" Text="Bio:"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox1" runat="server" Height="129px" Width="286px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxBio" runat="server" Height="129px" Width="286px"></asp:TextBox>
         <br />
         <br />
+        <asp:Button ID="Button1" runat="server" PostBackUrl="~/Settings.aspx" Text="Cancel" />
         <asp:Button ID="ButtonUpdateProfile" runat="server" OnClick="ButtonUpdateProfile_Click" Text="Save" />
+    
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     
     </div>
     </form>

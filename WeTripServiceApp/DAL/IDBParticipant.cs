@@ -7,10 +7,8 @@ using WeTripServiceApp.MODEL;
 
 namespace WeTripServiceApp.DAL
 {
-    interface IDBTrip
+    interface IDBParticipant
     {
-        int insertTrip(Trip trip);
-        Trip getTripeById(int id);
-
+       int insertParticipant(Participant participant);
     }
 }

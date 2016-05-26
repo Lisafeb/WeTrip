@@ -28,5 +28,9 @@ namespace WeTripServiceApp.BLL
             Trip trip = new Trip(null, title, length, date, budget, maxNrOfParticipants, extraInfo, active, creatorId);
             return dbTrip.insertTrip(trip);
         }
+        public Trip getTripById(int id)
+        {
+            return dbTrip.getTripeById(id);
+        }
     }
 }

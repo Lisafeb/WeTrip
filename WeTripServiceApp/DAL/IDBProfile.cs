@@ -8,7 +8,13 @@ namespace WeTripServiceApp.DAL
 {
     interface IDBProfile
     {
-        int UpdateProfile(Profile profile);
-           
+        int insertProfile(Profile profile);
+
+        int getProfile(int id);
+        Profile getProfileByIdOfCreator(int id);
+
+        int updateProfile(int id, int age, decimal budget, string country, string bio);
+
+
     }
 }

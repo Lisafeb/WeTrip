@@ -19,10 +19,23 @@ namespace WeTripServiceApp.BLL
 
         }
         [OperationContract]
-        public int UpdateProfile(int? id, bool gender, int age, decimal budget, string country, string bio, int rating, int creatorId)
+        public int insertProfile( bool gender, int age, decimal budget, string country, string bio, int rating, int creatorId)
         {
             Profile profile = new Profile(null, gender, age, budget, country, bio, rating, creatorId);
-            return dbProfile.UpdateProfile(profile);
+            return dbProfile.insertProfile(profile);
+        }
+        public int getProfile(int id)
+        {
+            return dbProfile.getProfile(id);
+        }
+
+        public int updateProfile(int id, int age, decimal budget, string country, string bio)
+        {
+            return dbProfile.updateProfile(id, age, budget, country, bio);        }
+
+        public Profile getProfileByIdOfCreator(int id)
+        {
+            return dbProfile.getProfileByIdOfCreator(id);
         }
     }
 }

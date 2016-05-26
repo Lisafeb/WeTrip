@@ -23,6 +23,7 @@
         Email:</div>
         <asp:Label ID="emailLabel" runat="server" Text="Label"></asp:Label>
         <asp:TextBox ID="emailField" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" PostBackUrl="~/Settings.aspx" Text="Cancel" />
         <asp:Button ID="updateButton" runat="server" OnClick="updateButton_Click" Text="update" />
         <br />
         <br />
@@ -36,7 +37,7 @@
         <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password" />
         </p>
         <p>
-            New Password</p>
+            New Passwordse</p>
         <p>
         <asp:TextBox ID="NewPasswordTextBox" runat="server" TextMode="Password" OnTextChanged="NewPasswordTextBox_TextChanged" />
         </p>
@@ -46,6 +47,7 @@
         <asp:TextBox ID="RepeatPasswordTextBox" runat="server" TextMode="Password" />
         </p>
         <p>
+            <asp:Button ID="Button2" runat="server" PostBackUrl="~/Settings.aspx" Text="Cancel" />
         <asp:Button ID="ChangeButton" runat="server" OnClick="ChangeButton_Click" Text="Change Password" />
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         </p>

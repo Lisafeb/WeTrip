@@ -10,16 +10,7 @@
 namespace WeTripWebApp {
     
     
-    public partial class InsertNumber {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class HomePageLoggedIn {
         
         /// <summary>
         /// LoginName1 control.
@@ -31,13 +22,22 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.LoginName LoginName1;
         
         /// <summary>
-        /// testButton control.
+        /// LinkButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button testButton;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        
+        /// <summary>
+        /// gwrss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton gwrss;
         
         /// <summary>
         /// LoginStatus1 control.

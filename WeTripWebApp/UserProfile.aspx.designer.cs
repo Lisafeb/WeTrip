@@ -40,22 +40,13 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.Label CurrentUserName;
         
         /// <summary>
-        /// UserName control.
+        /// LabelUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UserName;
-        
-        /// <summary>
-        /// TextBoxUserName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUserName;
+        protected global::System.Web.UI.WebControls.Label LabelUserName;
         
         /// <summary>
         /// Gender control.
@@ -67,13 +58,13 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.Label Gender;
         
         /// <summary>
-        /// TextBoxGender control.
+        /// DropDownListGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxGender;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListGender;
         
         /// <summary>
         /// Age control.
@@ -85,13 +76,13 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.Label Age;
         
         /// <summary>
-        /// TextBoxAge control.
+        /// DropDownListAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxAge;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListAge;
         
         /// <summary>
         /// Country control.
@@ -157,13 +148,22 @@ namespace WeTripWebApp {
         protected global::System.Web.UI.WebControls.Label Bio;
         
         /// <summary>
-        /// TextBox1 control.
+        /// TextBoxBio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxBio;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// ButtonUpdateProfile control.
@@ -173,5 +173,14 @@ namespace WeTripWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonUpdateProfile;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
     }
 }

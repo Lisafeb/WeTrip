@@ -15,24 +15,26 @@ namespace WeTripWebApp
         
         protected void Page_Load(object sender, EventArgs e)
         {  WeTripServiceApp.BLL.AccountCtr b = new AccountCtr();
-          //  string email="";
+            //  string email="";
             if (!this.Page.User.Identity.IsAuthenticated)
             {
                 FormsAuthentication.RedirectToLoginPage();
-                
-                
+
+
 
 
             }
-            if (!IsPostBack)
-            {
-                userName = Page.User.Identity.Name;
-                userNameLabel.Text = userName;
-                userNamefield.Text = userName;
+            else {
+                if (!IsPostBack)
+                {
+                    userName = Page.User.Identity.Name;
+                    userNameLabel.Text = userName;
+                    userNamefield.Text = userName;
 
-                emailLabel.Text = b.getAccountByUsername(userName).email;
-                emailField.Text = b.getAccountByUsername(userName).email;
+                    emailLabel.Text = b.getAccountByUsername(userName).email;
+                    emailField.Text = b.getAccountByUsername(userName).email;
 
+                }
             }
         }
 
@@ -41,8 +43,11 @@ namespace WeTripWebApp
             userName = Page.User.Identity.Name;
             string newUserName = userNamefield.Text;
                 string newEmail = emailField.Text;
-         //   Label1.Text = userName;
-                b.updateEmailAndUserName(userName, newUserName, newEmail);
+            //   Label1.Text = userName;
+            if (b.updateEmailAndUserName(userName, newUserName, newEmail)==1)
+            {
+                FormsAuthentication.RedirectToLoginPage();
+            }
             
 
         }
