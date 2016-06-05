@@ -31,5 +31,10 @@ namespace WeTripWebApp
             if(result==1)
                 FormsAuthentication.RedirectFromLoginPage(Login1.UserName, Login1.RememberMeSet);
         }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

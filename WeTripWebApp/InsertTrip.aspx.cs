@@ -16,8 +16,6 @@ namespace WeTripWebApp
             if (!this.Page.User.Identity.IsAuthenticated)
             {
                 FormsAuthentication.RedirectToLoginPage();
-
-
             }
         }
 
@@ -35,8 +33,23 @@ namespace WeTripWebApp
             string budget = TripBudget.Text;
             int maxNrOfParticipants = Convert.ToInt32(TripParticipants.Text);
             string extraInfo = TripDestination.Text;
-             //creatorid = Page.User.Identity.Name;
-            int b = trip.insertTrip(title, length, date, budget, maxNrOfParticipants, extraInfo, true, creatorId);
+            //creatorid = Page.User.Identity.Name;
+
+            try
+            {  
+                int b = trip.insertTrip(title, length, date, budget, maxNrOfParticipants, extraInfo, true, creatorId);
+                
+            }
+            catch (Exception)
+            {
+
+                StatusLabel.Text = "Your trip was not successfully inserted";
+                
+            }
+            finally
+            {
+                StatusLabel.Visible = true;
+            }
         }
 
         protected void datepicker_TextChanged(object sender, EventArgs e)

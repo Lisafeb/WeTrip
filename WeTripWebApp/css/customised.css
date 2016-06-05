@@ -1,5 +1,7 @@
 ﻿body {
-    background-color:#b3e5fe;
+    
+    background-color:lightblue;
+    margin-right:20px;
 }
 img {
     height:75px;
@@ -7,6 +9,21 @@ img {
     margin-top:-10px;
     float:left;
 }
+#settings
+{
+    height:30px;
+    float:right;
+    margin-top:7px;
+    margin-left:0px;
+}
+
+p.welcome {
+    font-size:30px;
+   color:cornflowerblue;
+   margin:0px;
+   float:right;
+}
+
 headerMaster{
     
 }
@@ -19,11 +36,38 @@ p{
     
     
 }
-.logIn
+footer
 {
-    width:800px;
-    margin:0 auto;
+
+    position:fixed;
+    bottom:0;
+    left:0;
+    text-align:center;
+  
+    
+  
 }
+#contentInsertTrip{
+    margin-left:10px;
+}
+button{
+    width:1350px;
+    margin-left:10px;
+    height:300px;
+    margin-bottom:5px;
+    
+  
+}
+customisedLabel{
+   font-size:20px;
+   margin-bottom:100px;
+   color:red;
+}
+
+welcome{
+    margin:0px;
+}
+
 head
 {
     margin:1px;

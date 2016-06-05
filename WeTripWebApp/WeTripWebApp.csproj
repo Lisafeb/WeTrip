@@ -68,18 +68,65 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\BCrypt.Net.dll" />
+    <Content Include="bin\DevOne.Security.Cryptography.BCrypt.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Diagnostics.Tracing.dll" />
+    <Content Include="bin\System.Runtime.dll" />
+    <Content Include="bin\System.Runtime.InteropServices.dll" />
+    <Content Include="bin\WeTripDB.dll" />
+    <Content Include="bin\WeTripServiceApp.dll" />
+    <Content Include="bin\WeTripServiceApp.pdb" />
+    <Content Include="bin\WeTripWebApp.dll" />
+    <Content Include="bin\WeTripWebApp.pdb" />
     <Content Include="CreateUpdateProfile.aspx" />
     <Content Include="css\customised.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="HomePage.aspx" />
     <Content Include="HomePageLoggedIn.aspx" />
     <Content Include="InsertDestination.aspx" />
     <Content Include="InsertNumber.aspx" />
     <Content Include="InsertTrip.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
     <Content Include="LogIn.aspx" />
+    <Content Include="obj\Release\TempPE\Service References.ServiceReferenceTest.Reference.cs.dll" />
+    <Content Include="obj\Release\TempPE\Service References.TestReference.Reference.cs.dll" />
+    <Content Include="obj\Release\WeTripWebApp.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\WeTripWebApp.dll" />
+    <Content Include="obj\Release\WeTripWebApp.pdb" />
     <Content Include="packages.config" />
+    <Content Include="photos\backg.png" />
+    <Content Include="photos\google_travel_logo.png" />
+    <Content Include="photos\settings.png" />
     <Content Include="Properties\DataSources\WeTripServiceApp.CompositeType.datasource" />
     <Content Include="MasterPage.Master" />
     <Content Include="YourTrips.aspx" />
+    <Content Include="photos\EXAM.zip" />
+    <Content Include="photos\Final Exam Project REPORT %28Recovered%29.docx" />
+    <Content Include="photos\Final Exam Project REPORT.docx" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\WeTripWebApp.dll.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\WeTripWebApp.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\PublishProfiles\test2804.pubxml" />
     <None Include="Service References\ServiceReferenceTest\Service1.wsdl" />
     <None Include="Service References\ServiceReferenceTest\Service1.xsd">
@@ -190,6 +237,12 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchTrip.aspx.cs">
       <DependentUpon>SearchTrip.aspx</DependentUpon>
@@ -277,6 +330,9 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReferenceTest\" />
     <WCFMetadataStorage Include="Service References\TestReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

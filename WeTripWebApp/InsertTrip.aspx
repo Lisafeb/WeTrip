@@ -1,64 +1,46 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InsertTrip.aspx.cs" Inherits="WeTripWebApp.InsertTrip" %>
+﻿<%@ Page Language="C#" masterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="InsertTrip.aspx.cs" Inherits="WeTripWebApp.InsertTrip" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 212px;
-        }
-        .auto-style2 {
-            margin-top: 1px;
-        }
-        .auto-style3 {
-            width: 592px;
-            height: 707px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div class="auto-style3">
     
+        <asp:Content ID="homePageLoggedInContent"  ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div id="contentInsertTrip">
         <asp:Label ID="Label1" runat="server" Text="Create a new trip" Font-Size="Larger"></asp:Label>
     
         <br />
     
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Give this trip a name!"></asp:Label>
+        <asp:Label ID="Label2" class="customisedLabel"  runat="server" Text="Give this trip a name!" Font-Size="20px"></asp:Label>
         <br />
-        <asp:TextBox ID="TripName" runat="server" Width="250px"></asp:TextBox>
+        <asp:TextBox ID="TripName" runat="server" Width="250px" CssClass="form-control"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorTripName" runat="server" ControlToValidate="TripName" ErrorMessage="Please fill in this field" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="Label9" runat="server" Text="Ex. Tour of London, Backpackers around Europe" Font-Size="XX-Small"></asp:Label>
+            <br />
         <br />
+        <asp:Label ID="Label8" runat="server" Text="Where to?" Font-Size="20px"></asp:Label>
         <br />
-        <asp:Label ID="Label8" runat="server" Text="Where to?"></asp:Label>
-        <br />
-        <asp:TextBox ID="TripDestination" runat="server" Width="250px"></asp:TextBox>
+        <asp:TextBox ID="TripDestination" runat="server" Width="250px" CssClass="form-control"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TripDestination" ErrorMessage="Please fill in this field" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="What's the duration?"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="What's the duration?" Font-Size="20px"></asp:Label>
         <br />
-        <asp:TextBox ID="TripDuration" runat="server" Width="250px" TextMode="Number"></asp:TextBox>
+        <asp:TextBox ID="TripDuration" runat="server" Width="250px" TextMode="Number" CssClass="form-control"></asp:TextBox>
         <asp:Label ID="Label11" runat="server" Text="Days"></asp:Label>
         <br />
         <br />
-        <asp:Label ID="Label4" runat="server" Text="When does it start?"></asp:Label>
-        <asp:TextBox ID="datepicker" runat="server" Width="250px" CssClass="auto-style1" OnTextChanged="datepicker_TextChanged"></asp:TextBox>
-<p>Date: <input type="text" id="datepicker" class="auto-style1"></p>
+        <asp:Label ID="Label4" runat="server" Text="When does it start?" Font-Size="20px"></asp:Label>
+        <asp:TextBox ID="datepicker" runat="server" Width="250px" CssClass="form-control" OnTextChanged="datepicker_TextChanged"></asp:TextBox>
         <br />
 
 
 
 
 
-        <html lang="en">
-<head>
+   
+
   <meta charset="utf-8">
   <title>jQuery UI Datepicker - Default functionality</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -70,25 +52,20 @@
     $( "#datepicker" ).datepicker();
   });
   </script>
-</head>
-<body>
- 
-</body>
-</html>
-        <asp:Label ID="Label5" runat="server" Text="What's the budget?"></asp:Label>
+
+
+        <asp:Label ID="Label5" runat="server" Text="What's the budget?" Font-Size="20px"></asp:Label>
 
 
 
         <br />
-        <asp:TextBox ID="TripBudget" runat="server" Width="250px"></asp:TextBox>
+        <asp:TextBox ID="TripBudget" runat="server" Width="250px" CssClass="form-control"></asp:TextBox>
         <br />
+        <asp:Label ID="Label6" runat="server" Text="How many participants?" Font-Size="20px"></asp:Label>
         <br />
-        <asp:Label ID="Label6" runat="server" Text="How many participants?"></asp:Label>
+        <asp:TextBox ID="TripParticipants" runat="server" Width="250px" TextMode="Number" CssClass="form-control"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TripParticipants" runat="server" Width="250px" TextMode="Number"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="Label7" runat="server" Text="Describe it a bit more"></asp:Label>
+        <asp:Label ID="Label7" runat="server" Text="Describe it a bit more" Font-Size="20px"></asp:Label>
         <br />
         <asp:Label ID="Label10" runat="server" Text="Ex. Itinerary" Font-Size="Smaller"></asp:Label>
         <br />
@@ -99,9 +76,13 @@
     
         <br />
         <br />
-        <asp:Button ID="ButtonSaveTrip" runat="server" Text="Save Trip" OnClick="ButtonSaveTrip_Click" />
+        <asp:Button ID="ButtonSaveTrip" runat="server" Text="Save Trip" OnClick="ButtonSaveTrip_Click" CssClass="btn btn-success" />
+    
+        <asp:Button ID="ButtonSaveTrip0" runat="server" Text="Back" OnClick="ButtonSaveTrip_Click" CssClass="btn btn-primary" PostBackUrl="~/HomePageLoggedIn.aspx" />
+    
+        <br />
+        <asp:Label ID="StatusLabel" runat="server" Text="Your trip was successfully inserted!" Visible="False"></asp:Label>
     
     </div>
-    </form>
-</body>
-</html>
+            </asp:Content>
+

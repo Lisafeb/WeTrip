@@ -29,7 +29,9 @@
         <br />
         Password:<br />
         <asp:TextBox ID="passwordText" runat="server" Width="232px" TextMode="Password"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ControlToValidate="passwordText" ErrorMessage="Please fill in a password" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" 
+            runat="server" ControlToValidate="passwordText" 
+            ErrorMessage="Please fill in a password" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         <br />
         Confirm password:<br />
