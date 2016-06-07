@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WeTripWebApp.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/customised.css" rel="stylesheet" >
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="headerMaster">
+    <img src="photos/google_travel_logo.png" class="img-rounded">
+    
+    <p>&nbsp;We Trip</p>
+        </div>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="all">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+<footer>
+     <small>© Copyright 2016, WeTrip</small>
+</footer>
+</html>
