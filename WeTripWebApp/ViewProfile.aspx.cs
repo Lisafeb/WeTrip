@@ -63,12 +63,14 @@ namespace WeTripWebApp
                 if (result != 0)
                 {
                     Label1.Text = "Profile updated";
+                Label1.Visible = true;
                 Response.Redirect("~/ViewProfile.aspx");
                 }
                 else
                 {
                     Label1.Text = "Profile not updated";
-                }
+                Label1.Visible = true;
+            }
             
 
 

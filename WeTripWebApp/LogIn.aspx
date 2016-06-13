@@ -5,8 +5,8 @@
 
 
     
-    
-    <div class="logIn" style="clear:left">
+    <div class="container-fluid">
+    <div class="logIn text-center" style="clear:left">
         <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" Height="217px" Width="798px">
             <LayoutTemplate>
                 <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
@@ -75,6 +75,7 @@
             </LayoutTemplate>
         </asp:Login>
         </div>
+    </div>
   
 
       </asp:Content>

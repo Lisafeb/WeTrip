@@ -16,7 +16,8 @@
         <br />
         <asp:LinkButton ID="ProfileInfoLinkButton" runat="server" PostBackUrl="~/ViewProfile.aspx" Visible="False">Profile Info</asp:LinkButton>
         <br />
-        View your trips<br />
+                <asp:LinkButton ID="LinkButton6" runat="server" PostBackUrl="~/Test.aspx" Visible="True">View Your trips</asp:LinkButton>
+
         <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/HomePageLoggedIn.aspx">Back</asp:LinkButton>
         <br />
         <br />

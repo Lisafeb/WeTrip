@@ -56,7 +56,7 @@
         <br />
         <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
         <asp:Button ID="CancelButton" runat="server" PostBackUrl="~/Settings.aspx" Text="Cancel" />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
         <br />
         <br />
         <br />

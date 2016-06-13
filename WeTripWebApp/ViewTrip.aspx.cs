@@ -39,6 +39,12 @@ namespace WeTripWebApp
                 }
                 StatusLabel.Visible = false;
 
+                int parInt = (int)ac.getAccountByUsername(Page.User.Identity.Name).id;
+                if(parInt==trip.creatorId)
+                {
+                    JoinButton.Visible = false;
+                }
+
 
 
 
